@@ -37,14 +37,14 @@ h5 {
   line-height: 1.2;
 }
 
-.section {
+section {
   margin-top: 6rem;
 }
-.section > h2, .section > p {
+section > h2, section > p {
   text-align: center;
 }
-.section > p {
-  width: 45%;
+section > p {
+  width: 80%;
   margin: 0.6rem auto 2.5rem;
 }
 
@@ -81,6 +81,12 @@ h5 {
 button {
   border: none;
   cursor: pointer;
+}
+
+svg {
+  fill: #fff;
+  display: flex;
+  align-items: center;
 }
 
 nav {
@@ -121,11 +127,6 @@ nav .container a {
 nav .container button {
   display: none;
 }
-nav .container button .navbar__svg {
-  fill: white;
-  display: flex;
-  align-items: center;
-}
 
 .home {
   background: linear-gradient(135deg, #480ca8, #4cc9f0);
@@ -160,6 +161,44 @@ nav .container button .navbar__svg {
   margin: 1rem 0 2rem;
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.2rem;
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.services .container article {
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: #fff;
+  display: flex;
+  gap: 1.5rem;
+  cursor: pointer;
+  height: fit-content;
+  transition: all 0.4s ease-in-out;
+}
+.services .container article h1,
+.services .container article h2,
+.services .container article h3,
+.services .container article h4,
+.services .container article h5,
+.services .container article a {
+  color: #fff;
+}
+.services .container article:hover {
+  margin-top: -0.5rem;
+}
+.services .container article div h4 {
+  margin-bottom: 1rem;
+}
+.services .container article small {
+  color: rgba(255, 255, 255, 0.7);
+}
+.services .container article svg {
+  width: 80px;
+  height: 30px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -239,6 +278,10 @@ nav .container button .navbar__svg {
     color: rgba(255, 255, 255, 0.7);
     font-size: 1rem;
   }
+  .services .container {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 800px) {
   .section > p {
@@ -259,6 +302,13 @@ nav .container button .navbar__svg {
   .home .container .header__image {
     width: 50%;
     margin: 0 auto;
+  }
+  .services .container {
+    gap: 0.5rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services .container article:hover {
+    margin: 0;
   }
 }
 @media screen and (max-width: 600px) {

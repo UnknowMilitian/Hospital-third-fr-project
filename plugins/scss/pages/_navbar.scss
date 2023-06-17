@@ -31,12 +31,6 @@ nav {
 
     button {
       display: none;
-
-      & .navbar__svg {
-        fill: white;
-        display: flex;
-        align-items: center;
-      }
     }
   }
 }

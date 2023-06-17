@@ -103,6 +103,13 @@
       }
     }
   }
+
+  .services {
+    .container {
+      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }
 
 @media screen and (max-width: $tablet-size) {
@@ -128,6 +135,19 @@
       .header__image {
         width: 50%;
         margin: 0 auto;
+      }
+    }
+  }
+
+  .services {
+    .container {
+      gap: 0.5rem;
+      grid-template-columns: repeat(1, 1fr);
+
+      article {
+        &:hover {
+          margin: 0;
+        }
       }
     }
   }
