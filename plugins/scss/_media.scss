@@ -1,0 +1,19 @@
+@media screen and (max-width: $desktop-size) {
+  .container {
+    width: $container-md;
+  }
+
+  .section {
+    & > p {
+      width: $container-lg;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-size) {
+  .section {
+    & > p {
+      width: $container-md;
+    }
+  }
+}

@@ -1,12 +1,5 @@
-@font-face {
-  font-family: PublicFans;
-  src: url(/plugins/fonts/PublicSans-Black.ttf);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "PublicFans", sans-serif;
-  scroll-behavior: smooth;
-}
+@import "variables";
+@import "mixins";
+@import "general";
+@import "config";
+@import "media";

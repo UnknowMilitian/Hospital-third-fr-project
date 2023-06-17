@@ -1,13 +1,95 @@
+.container {
+  width: 82%;
+  margin: 0 auto;
+}
+
+.img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+.section {
+  margin-top: 6rem;
+}
+.section > h2, .section > p {
+  text-align: center;
+}
+.section > p {
+  width: 45%;
+  margin: 0.6rem auto 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+  background: #f72585;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: all 0.4s ease-in-out;
+}
+.btn:hover {
+  background: #f84c9b;
+  box-shadow: 0 1rem 1.6rem rgba(12, 3, 27, 0.15);
+}
+
+.btn-primary {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+  background: #480ca8;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: all 0.4s ease-in-out;
+}
+.btn-primary:hover {
+  background: #580fce;
+  box-shadow: 0 1rem 1.6rem rgba(12, 3, 27, 0.15);
+}
+
 @font-face {
-  font-family: PublicFans;
-  src: url(/plugins/fonts/PublicSans-Black.ttf);
+  font-family: Montserrat;
+  src: url(/plugins/fonts/Montserrat-Regular.ttf);
 }
 * {
   margin: 0;
   padding: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
   box-sizing: border-box;
-  font-family: "PublicFans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: #480ca8;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  .section > p {
+    width: 82%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section > p {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
