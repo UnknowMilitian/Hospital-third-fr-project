@@ -35,7 +35,7 @@ h5 {
   line-height: 1.2;
 }
 
-.section {
+section {
   margin-top: 6rem;
 
   & > h2,
@@ -44,7 +44,7 @@ h5 {
   }
 
   & > p {
-    width: 45%;
+    width: 80%;
     margin: 0.6rem auto 2.5rem;
   }
 }
@@ -60,4 +60,10 @@ h5 {
 button {
   border: none;
   cursor: pointer;
+}
+
+svg {
+  fill: $white-color;
+  display: flex;
+  align-items: center;
 }
