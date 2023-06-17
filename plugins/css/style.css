@@ -1,3 +1,25 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(/plugins/fonts/Montserrat-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  color: rgba(12, 3, 27, 0.7);
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  background: rgba(76, 201, 240, 0.1);
+  user-select: none;
+}
+
 .container {
   width: 82%;
   margin: 0 auto;
@@ -34,7 +56,6 @@ h5 {
   border-radius: 0.4rem;
   background: #f72585;
   color: #fff;
-  cursor: pointer;
   border: none;
   transition: all 0.4s ease-in-out;
 }
@@ -50,7 +71,6 @@ h5 {
   border-radius: 0.4rem;
   background: #480ca8;
   color: #fff;
-  cursor: pointer;
   border: none;
   transition: all 0.4s ease-in-out;
 }
@@ -59,23 +79,9 @@ h5 {
   box-shadow: 0 1rem 1.6rem rgba(12, 3, 27, 0.15);
 }
 
-@font-face {
-  font-family: Montserrat;
-  src: url(/plugins/fonts/Montserrat-Regular.ttf);
-}
-* {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #480ca8;
+button {
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
@@ -89,6 +95,108 @@ body {
 @media screen and (max-width: 600px) {
   .section > p {
     width: 90%;
+  }
+}
+nav {
+  width: 100vw;
+  height: 5rem;
+  display: grid;
+  position: fixed;
+  place-items: center;
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  box-shadow: 0 1rem 1rem rgba(12, 3, 27, 0.1);
+  z-index: 10;
+}
+nav h1,
+nav h2,
+nav h3,
+nav h4,
+nav h5,
+nav a {
+  color: #fff;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container .nav__logo h3 {
+  color: #fff;
+}
+nav .container ul {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+nav .container a {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+nav .container button {
+  display: none;
+}
+nav .container button .navbar__svg {
+  fill: white;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  nav .container button {
+    display: inline-block;
+    background: transparent;
+    font-size: 2rem;
+  }
+  nav .container button.close__nav-btn {
+    display: none;
+  }
+  nav .container ul {
+    display: none;
+    position: fixed;
+    right: 5%;
+    top: 5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    perspective: 300px;
+  }
+  nav .container ul li {
+    width: 100%;
+    opacity: 0;
+    animation: flipNavItem 0.3s ease-in-out forwards;
+    transform-origin: top;
+  }
+  nav .container ul li:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  nav .container ul li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  nav .container ul li:nth-child(4) {
+    animation-delay: 0.5s;
+  }
+  nav .container ul li:nth-child(5) {
+    animation-delay: 0.7s;
+  }
+  @keyframes flipNavItem {
+    0% {
+      transform: rotateX(90deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  nav .container ul li a {
+    color: #fff;
+    height: 100%;
+    display: block;
+    padding: 1.5rem 2rem;
+    border-radius: 0;
+    background: linear-gradient(#4cc9f0, #14b8eb);
+  }
+  nav .container ul li a.btn {
+    background: #f72585;
   }
 }
 

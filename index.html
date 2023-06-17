@@ -14,7 +14,48 @@
     <title>Responsive Hospital Website</title>
   </head>
   <body>
-    <button class="btn-primary">Submit</button>
+    <!-- START Navbar -->
+    <nav>
+      <div class="container">
+        <a href="h3" class="nav__logo"><h3>EGATOR</h3></a>
+
+        <ul class="nav__items" id="nav__items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#specialists">Specialists</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#appointment" class="btn">Make Appointment</a></li>
+        </ul>
+
+        <button type="button" class="open__nav-btn">
+          <svg
+            class="navbar__svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+          >
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+          </svg>
+        </button>
+        <button type="button" class="close__nav-btn">
+          <svg
+            class="navbar__svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- END Navbar -->
+
+    <!-- JavaScript Scripts -->
     <script src="/plugins/js/script.js"></script>
   </body>
 </html>
