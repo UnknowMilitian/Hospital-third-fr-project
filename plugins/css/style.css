@@ -83,6 +83,11 @@ button {
   cursor: pointer;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+}
+
 svg {
   fill: #fff;
   display: flex;
@@ -201,6 +206,112 @@ nav .container button {
   height: 30px;
 }
 
+.specialists .container {
+  width: 68%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.specialists .container article {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 1.5rem rgba(12, 3, 27, 0.1);
+  position: relative;
+  transition: all 0.7s ease-in-out;
+  cursor: pointer;
+}
+.specialists .container article:hover {
+  box-shadow: none;
+}
+.specialists .container article:hover .specialist__image::before {
+  left: 0;
+  border-radius: 1rem;
+}
+.specialists .container article:hover .specialist__socials {
+  opacity: 1;
+  visibility: visible;
+}
+.specialists .container article:hover .specialist__whatsapp {
+  opacity: 1;
+  visibility: visible;
+}
+.specialists .container article .specialist__image {
+  height: 20rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.specialists .container article .specialist__image::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(135deg, rgba(72, 12, 168, 0.8), rgba(76, 201, 240, 0.8));
+  border-radius: 50%;
+  transition: all 1s ease-in-out;
+}
+.specialists .container article .specialist__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.specialists .container article .specialist__details {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.specialists .container article .specialist__socials {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s 0.4s ease-in-out;
+}
+.specialists .container article .specialist__socials a {
+  background: #fff;
+  padding: 0.4rem;
+  display: flex;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+.specialists .container article .specialist__socials a:hover {
+  background: #480ca8;
+}
+.specialists .container article .specialist__socials a:hover svg {
+  transition: fill 0.4s ease-in-out;
+  fill: #fff;
+}
+.specialists .container article .specialist__socials a svg {
+  fill: #480ca8;
+  height: 20px;
+  width: 20px;
+}
+.specialists .container article a.specialist__whatsapp {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30%;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s 0.4s ease-in-out;
+}
+.specialists .container article a.specialist__whatsapp svg {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  padding: 0.5rem;
+  background: #54eb72;
+  fill: #fff;
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     width: 90%;
@@ -282,6 +393,9 @@ nav .container button {
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
   }
+  .specialists .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media screen and (max-width: 800px) {
   .section > p {
@@ -310,6 +424,9 @@ nav .container button {
   .services .container article:hover {
     margin: 0;
   }
+  .specialists .container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 600px) {
   .home .container .header__content {
@@ -317,6 +434,9 @@ nav .container button {
   }
   .home .container .header__image {
     width: 70%;
+  }
+  .specialists .container {
+    grid-template-columns: 1fr;
   }
 }
 
