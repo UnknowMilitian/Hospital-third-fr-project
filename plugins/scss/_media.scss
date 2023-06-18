@@ -183,4 +183,12 @@
       grid-template-columns: 1fr;
     }
   }
+
+  .testimonials {
+    .container {
+      swiper-slide {
+        padding: 1.5rem;
+      }
+    }
+  }
 }
