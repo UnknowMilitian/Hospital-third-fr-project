@@ -9,10 +9,22 @@ openNavBtn.addEventListener("click", () => {
   closeNavBtn.style.display = "inline-block";
 });
 
-closeNavBtn.addEventListener("click", () => {
+const closeNav = () => {
   navItems.style.display = "none";
   openNavBtn.style.display = "inline-block";
   closeNavBtn.style.display = "none";
+};
+
+if (window.innerWidth < 1024) {
+  document.querySelectorAll(".nav__items li a").forEach((navItems) => {
+    navItems.addEventListener("click", () => {
+      closeNav();
+    });
+  });
+}
+
+closeNavBtn.addEventListener("click", () => {
+  closeNav();
 });
 
 // ! Swiper Scripts
