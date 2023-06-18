@@ -312,6 +312,46 @@ nav .container button {
   fill: #fff;
 }
 
+.testimonials .container {
+  width: 82%;
+}
+.testimonials .container .swiper-wrapper {
+  margin-bottom: 3rem;
+}
+.testimonials .container .swiper-wrapper swiper-slide {
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  cursor: default;
+  font-size: 0.9rem;
+}
+.testimonials .container .swiper-wrapper swiper-slide h1,
+.testimonials .container .swiper-wrapper swiper-slide h2,
+.testimonials .container .swiper-wrapper swiper-slide h3,
+.testimonials .container .swiper-wrapper swiper-slide h4,
+.testimonials .container .swiper-wrapper swiper-slide h5,
+.testimonials .container .swiper-wrapper swiper-slide a {
+  color: #fff;
+}
+.testimonials .container .swiper-wrapper swiper-slide p {
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.testimonials .container .swiper-wrapper swiper-slide .patient {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.testimonials .container .swiper-wrapper swiper-slide .patient .avatar {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonials .container .swiper-wrapper swiper-slide .patient .patient__details small {
+  color: #fff;
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     width: 90%;
@@ -437,6 +477,9 @@ nav .container button {
   }
   .specialists .container {
     grid-template-columns: 1fr;
+  }
+  .testimonials .container swiper-slide {
+    padding: 1.5rem;
   }
 }
 
