@@ -110,6 +110,12 @@
       grid-template-columns: 1fr 1fr;
     }
   }
+
+  .specialists {
+    .container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 }
 
 @media screen and (max-width: $tablet-size) {
@@ -151,6 +157,12 @@
       }
     }
   }
+
+  .specialists {
+    .container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }
 
 @media screen and (max-width: $phone-size) {
@@ -163,6 +175,12 @@
       .header__image {
         width: 70%;
       }
+    }
+  }
+
+  .specialists {
+    .container {
+      grid-template-columns: 1fr;
     }
   }
 }
